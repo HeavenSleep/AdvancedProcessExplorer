@@ -1,0 +1,22 @@
+﻿<Controls:MetroWindow x:Class="MaJyx_Advanced_Proccess.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="MaJyx Advenced Process Explorer" Height="600" Width="525" WindowStartupLocation="CenterScreen" MinWidth="525" MinHeight="600"
+                      GlowBrush="{DynamicResource AccentColorBrush}" Closing="MetroWindow_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="93*" />
+            <RowDefinition Height="40" MinHeight="40"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" x:Name="dataGrid" Margin="0" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType={x:Type GroupBox}}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type GroupBox}}}" ItemsSource="{Binding processList}" IsReadOnly="True" IsSynchronizedWithCurrentItem="True" SelectedCellsChanged="dataGrid_SelectedCellsChanged" SelectionChanged="dataGrid_SelectionChanged" />
+        <Grid Grid.Row="1" Background="{StaticResource AccentColorBrush}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <DockPanel LastChildFill="False" HorizontalAlignment="Right">
+                <Button x:Name="killP" DockPanel.Dock="Left" Content="Kill" Margin="5" Background="{StaticResource HighlightBrush}" Foreground="{StaticResource AccentSelectedColorBrush}" Cursor="Hand" Visibility="Hidden" Width="120" Click="killP_Click" />
+                <Button x:Name="dumpP" DockPanel.Dock="Left" Content="Dump memory"  Margin="5" Background="{StaticResource HighlightBrush}" Foreground="{StaticResource AccentSelectedColorBrush}" Cursor="Hand" Visibility="Hidden" Width="120" Click="dumpP_Click" />
+                <Button x:Name="openP" DockPanel.Dock="Left" Content="File Location" Margin="5" Background="{StaticResource HighlightBrush}" Foreground="{StaticResource AccentSelectedColorBrush}" Cursor="Hand" Visibility="Hidden" Width="120" Click="openP_Click" />
+                <Button x:Name="startP" DockPanel.Dock="Left" Content="Start" Margin="5" Background="{StaticResource HighlightBrush}" Foreground="{StaticResource AccentSelectedColorBrush}" Cursor="Hand" Width="120" Click="startP_Click"/>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>

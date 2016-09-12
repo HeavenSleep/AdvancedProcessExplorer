@@ -1,0 +1,11 @@
+﻿<Controls:MetroWindow x:Class="MaJyx_Advanced_Proccess.DumpViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Dump - " Height="600" Width="525" WindowStartupLocation="Manual" MinWidth="525" MinHeight="600"
+                      GlowBrush="{DynamicResource AccentColorBrush}">
+    <Grid>
+        <FlowDocumentReader x:Name="dumpViewer" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" ViewingMode="Scroll" FontFamily="Segoe UI Symbol" IsTwoPageViewEnabled="False"/>
+        
+    </Grid>
+</Controls:MetroWindow>
